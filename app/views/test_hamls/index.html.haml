@@ -1,0 +1,25 @@
+%h1 Listing test_hamls
+
+%table
+  %tr
+    %th 
+    %th Haml int
+    %th Haml float
+    %th Haml text
+    %th
+    %th
+    %th
+
+  - @test_hamls.each do |test_haml|
+    %tr
+      %td= test_haml.
+      %td= test_haml.haml_int
+      %td= test_haml.haml_float
+      %td= test_haml.haml_text
+      %td= link_to 'Show', test_haml
+      %td= link_to 'Edit', edit_test_haml_path(test_haml)
+      %td= link_to 'Destroy', test_haml, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Test haml', new_test_haml_path
