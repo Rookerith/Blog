@@ -1,0 +1,16 @@
+%h1 Welcome#index
+%p Find me in app/views/welcome/index.html.haml
+%p The passed variable value is: #{@url_params}
+%form.form-horizontal{action: "", method: "post" }
+	%div.control-group
+		%label.control-label{for: "uname"} Name:
+		%input#uname{type: "text", name: "theuser[name]"}
+	%div.control-group
+		%label.control-label{for: "uage"} Age:
+		%input#uage{type: "text", name: "theuser[age]"}
+	%div.control-group
+		%label.control-label{for: "ulocation"} Location:
+		%input#ulocation{type: "text", name: "theuser[location]"}
+	%div.control-group
+		%label.control-label
+		%input.btn{type: "submit", value: "Save"}

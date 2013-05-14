@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @test123.name
+%p
+  %b Age:
+  = @test123.age
+
+= link_to 'Edit', edit_test123_path(@test123)
+\|
+= link_to 'Back', test123s_path

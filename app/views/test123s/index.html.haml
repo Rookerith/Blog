@@ -1,0 +1,21 @@
+%h1 Listing test123s
+
+%table
+  %tr
+    %th Name
+    %th Age
+    %th
+    %th
+    %th
+
+  - @test123s.each do |test123|
+    %tr
+      %td= test123.name
+      %td= test123.age
+      %td= link_to 'Show', test123
+      %td= link_to 'Edit', edit_test123_path(test123)
+      %td= link_to 'Destroy', test123, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Test123', new_test123_path

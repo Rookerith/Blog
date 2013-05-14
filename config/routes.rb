@@ -1,5 +1,15 @@
 Blog::Application.routes.draw do
-  get "welcome/index"
+  get "jason/index"
+
+  resources :test123s
+
+
+#  get "welcome/index"
+  resource :welcome, controller: "welcome" #do
+#    get "farts", on: :collection
+#  end
+  
+  root :to => 'welcome#show'
 
   get "greetings2/hello"
 
@@ -58,7 +68,7 @@ Blog::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'welcome#index'
+  
 
   # See how all your routes lay out with "rake routes"
 
