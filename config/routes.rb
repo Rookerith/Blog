@@ -1,6 +1,11 @@
 Blog::Application.routes.draw do
-  resources :test_hamls
+  get "greetings2/hello"
 
+  get "greetings2/goodbye"
+
+  get "greetings/hello"
+
+  get "greetings/goodbye"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
